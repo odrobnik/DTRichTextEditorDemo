@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7215DE7DA600C2568C /* UIKit.framework */; };
+		A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7415DE7DA600C2568C /* Foundation.framework */; };
+		A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */; };
+		A70A6D7D15DE7DA600C2568C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */; };
+		A70A6D7F15DE7DA600C2568C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D7E15DE7DA600C2568C /* main.m */; };
+		A70A6D8315DE7DA600C2568C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D8215DE7DA600C2568C /* AppDelegate.m */; };
+		A70A6D8615DE7DA600C2568C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D8515DE7DA600C2568C /* ViewController.m */; };
+		A70A6D8915DE7DA600C2568C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D8715DE7DA600C2568C /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A70A6D6E15DE7DA600C2568C /* DTRichTextEditorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTRichTextEditorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70A6D7215DE7DA600C2568C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A70A6D7415DE7DA600C2568C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A70A6D7A15DE7DA600C2568C /* DTRichTextEditorDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTRichTextEditorDemo-Info.plist"; sourceTree = "<group>"; };
+		A70A6D7C15DE7DA600C2568C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A70A6D7E15DE7DA600C2568C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A70A6D8015DE7DA600C2568C /* DTRichTextEditorDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditorDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A70A6D8115DE7DA600C2568C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A70A6D8215DE7DA600C2568C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A70A6D8415DE7DA600C2568C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A70A6D8515DE7DA600C2568C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A70A6D8815DE7DA600C2568C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A70A6D6B15DE7DA600C2568C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
+				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
+				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A70A6D6315DE7DA600C2568C = {
+			isa = PBXGroup;
+			children = (
+				A70A6D7815DE7DA600C2568C /* DTRichTextEditorDemo */,
+				A70A6D7115DE7DA600C2568C /* Frameworks */,
+				A70A6D6F15DE7DA600C2568C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A70A6D6F15DE7DA600C2568C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A70A6D6E15DE7DA600C2568C /* DTRichTextEditorDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A70A6D7115DE7DA600C2568C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A70A6D7215DE7DA600C2568C /* UIKit.framework */,
+				A70A6D7415DE7DA600C2568C /* Foundation.framework */,
+				A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A70A6D7815DE7DA600C2568C /* DTRichTextEditorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A70A6D8115DE7DA600C2568C /* AppDelegate.h */,
+				A70A6D8215DE7DA600C2568C /* AppDelegate.m */,
+				A70A6D8415DE7DA600C2568C /* ViewController.h */,
+				A70A6D8515DE7DA600C2568C /* ViewController.m */,
+				A70A6D8715DE7DA600C2568C /* ViewController.xib */,
+				A70A6D7915DE7DA600C2568C /* Supporting Files */,
+			);
+			path = DTRichTextEditorDemo;
+			sourceTree = "<group>";
+		};
+		A70A6D7915DE7DA600C2568C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A70A6D7A15DE7DA600C2568C /* DTRichTextEditorDemo-Info.plist */,
+				A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */,
+				A70A6D7E15DE7DA600C2568C /* main.m */,
+				A70A6D8015DE7DA600C2568C /* DTRichTextEditorDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A70A6D6D15DE7DA600C2568C /* DTRichTextEditorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70A6D8C15DE7DA600C2568C /* Build configuration list for PBXNativeTarget "DTRichTextEditorDemo" */;
+			buildPhases = (
+				A70A6D6A15DE7DA600C2568C /* Sources */,
+				A70A6D6B15DE7DA600C2568C /* Frameworks */,
+				A70A6D6C15DE7DA600C2568C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTRichTextEditorDemo;
+			productName = DTRichTextEditorDemo;
+			productReference = A70A6D6E15DE7DA600C2568C /* DTRichTextEditorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70A6D6515DE7DA600C2568C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Cocoanetics;
+			};
+			buildConfigurationList = A70A6D6815DE7DA600C2568C /* Build configuration list for PBXProject "DTRichTextEditorDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A70A6D6315DE7DA600C2568C;
+			productRefGroup = A70A6D6F15DE7DA600C2568C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A70A6D6D15DE7DA600C2568C /* DTRichTextEditorDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A70A6D6C15DE7DA600C2568C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70A6D7D15DE7DA600C2568C /* InfoPlist.strings in Resources */,
+				A70A6D8915DE7DA600C2568C /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70A6D6A15DE7DA600C2568C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70A6D7F15DE7DA600C2568C /* main.m in Sources */,
+				A70A6D8315DE7DA600C2568C /* AppDelegate.m in Sources */,
+				A70A6D8615DE7DA600C2568C /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70A6D7C15DE7DA600C2568C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A70A6D8715DE7DA600C2568C /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70A6D8815DE7DA600C2568C /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A70A6D8A15DE7DA600C2568C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A70A6D8B15DE7DA600C2568C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A70A6D8D15DE7DA600C2568C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DTRichTextEditorDemo/DTRichTextEditorDemo-Prefix.pch";
+				INFOPLIST_FILE = "DTRichTextEditorDemo/DTRichTextEditorDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A70A6D8E15DE7DA600C2568C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DTRichTextEditorDemo/DTRichTextEditorDemo-Prefix.pch";
+				INFOPLIST_FILE = "DTRichTextEditorDemo/DTRichTextEditorDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70A6D6815DE7DA600C2568C /* Build configuration list for PBXProject "DTRichTextEditorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70A6D8A15DE7DA600C2568C /* Debug */,
+				A70A6D8B15DE7DA600C2568C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70A6D8C15DE7DA600C2568C /* Build configuration list for PBXNativeTarget "DTRichTextEditorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70A6D8D15DE7DA600C2568C /* Debug */,
+				A70A6D8E15DE7DA600C2568C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70A6D6515DE7DA600C2568C /* Project object */;
+}
