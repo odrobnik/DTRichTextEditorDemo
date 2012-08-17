@@ -10,11 +10,19 @@
 		A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7215DE7DA600C2568C /* UIKit.framework */; };
 		A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7415DE7DA600C2568C /* Foundation.framework */; };
 		A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */; };
-		A70A6D7D15DE7DA600C2568C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */; };
-		A70A6D7F15DE7DA600C2568C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D7E15DE7DA600C2568C /* main.m */; };
-		A70A6D8315DE7DA600C2568C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D8215DE7DA600C2568C /* AppDelegate.m */; };
-		A70A6D8615DE7DA600C2568C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D8515DE7DA600C2568C /* ViewController.m */; };
-		A70A6D8915DE7DA600C2568C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D8715DE7DA600C2568C /* ViewController.xib */; };
+		A70A6D9E15DE7E3D00C2568C /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */; };
+		A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */; };
+		A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9515DE7E3D00C2568C /* Icon.png */; };
+		A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9615DE7E3D00C2568C /* Icon@2x.png */; };
+		A70A6DA215DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */; };
+		A70A6DA315DE7E3D00C2568C /* DTRichTextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */; };
+		A70A6DA415DE7E3D00C2568C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9C15DE7E3D00C2568C /* main.m */; };
+		A70A6DA615DE7E7E00C2568C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA515DE7E7E00C2568C /* libxml2.dylib */; };
+		A70A6DA815DE7E8600C2568C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */; };
+		A70A6DAA15DE7E8D00C2568C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA915DE7E8D00C2568C /* MediaPlayer.framework */; };
+		A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */; };
+		A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAD15DE7E9C00C2568C /* CoreText.framework */; };
+		A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAF15DE7EB000C2568C /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +30,23 @@
 		A70A6D7215DE7DA600C2568C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A70A6D7415DE7DA600C2568C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A70A6D7A15DE7DA600C2568C /* DTRichTextEditorDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTRichTextEditorDemo-Info.plist"; sourceTree = "<group>"; };
-		A70A6D7C15DE7DA600C2568C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A70A6D7E15DE7DA600C2568C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A70A6D8015DE7DA600C2568C /* DTRichTextEditorDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditorDemo-Prefix.pch"; sourceTree = "<group>"; };
-		A70A6D8115DE7DA600C2568C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A70A6D8215DE7DA600C2568C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A70A6D8415DE7DA600C2568C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A70A6D8515DE7DA600C2568C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A70A6D8815DE7DA600C2568C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A70A6D9015DE7E3D00C2568C /* DTRichTextEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTRichTextEditor-Info.plist"; sourceTree = "<group>"; };
+		A70A6D9115DE7E3D00C2568C /* DTRichTextEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditor-Prefix.pch"; sourceTree = "<group>"; };
+		A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
+		A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll@2x.png"; sourceTree = "<group>"; };
+		A70A6D9515DE7E3D00C2568C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A70A6D9615DE7E3D00C2568C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		A70A6D9815DE7E3D00C2568C /* DTRichTextEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorAppDelegate.h; sourceTree = "<group>"; };
+		A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorAppDelegate.m; sourceTree = "<group>"; };
+		A70A6D9A15DE7E3D00C2568C /* DTRichTextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorViewController.h; sourceTree = "<group>"; };
+		A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorViewController.m; sourceTree = "<group>"; };
+		A70A6D9C15DE7E3D00C2568C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A70A6DA515DE7E7E00C2568C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A70A6DA915DE7E8D00C2568C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A70A6DAD15DE7E9C00C2568C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A70A6DAF15DE7EB000C2568C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */,
+				A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */,
+				A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */,
+				A70A6DAA15DE7E8D00C2568C /* MediaPlayer.framework in Frameworks */,
+				A70A6DA815DE7E8600C2568C /* AssetsLibrary.framework in Frameworks */,
+				A70A6DA615DE7E7E00C2568C /* libxml2.dylib in Frameworks */,
 				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
 				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
 				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
@@ -50,8 +72,9 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
-				A70A6D7815DE7DA600C2568C /* DTRichTextEditorDemo */,
+				A70A6D8F15DE7E3D00C2568C /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
+				A70A6DA515DE7E7E00C2568C /* libxml2.dylib */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,35 +90,50 @@
 		A70A6D7115DE7DA600C2568C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D7215DE7DA600C2568C /* UIKit.framework */,
-				A70A6D7415DE7DA600C2568C /* Foundation.framework */,
+				A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */,
 				A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */,
+				A70A6DAD15DE7E9C00C2568C /* CoreText.framework */,
+				A70A6D7415DE7DA600C2568C /* Foundation.framework */,
+				A70A6DAF15DE7EB000C2568C /* ImageIO.framework */,
+				A70A6DA915DE7E8D00C2568C /* MediaPlayer.framework */,
+				A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */,
+				A70A6D7215DE7DA600C2568C /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A70A6D7815DE7DA600C2568C /* DTRichTextEditorDemo */ = {
+		A70A6D8F15DE7E3D00C2568C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D8115DE7DA600C2568C /* AppDelegate.h */,
-				A70A6D8215DE7DA600C2568C /* AppDelegate.m */,
-				A70A6D8415DE7DA600C2568C /* ViewController.h */,
-				A70A6D8515DE7DA600C2568C /* ViewController.m */,
-				A70A6D8715DE7DA600C2568C /* ViewController.xib */,
-				A70A6D7915DE7DA600C2568C /* Supporting Files */,
+				A70A6D9015DE7E3D00C2568C /* DTRichTextEditor-Info.plist */,
+				A70A6D9115DE7E3D00C2568C /* DTRichTextEditor-Prefix.pch */,
+				A70A6D9215DE7E3D00C2568C /* Resources */,
+				A70A6D9715DE7E3D00C2568C /* Source */,
 			);
-			path = DTRichTextEditorDemo;
+			path = Demo;
 			sourceTree = "<group>";
 		};
-		A70A6D7915DE7DA600C2568C /* Supporting Files */ = {
+		A70A6D9215DE7E3D00C2568C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D7A15DE7DA600C2568C /* DTRichTextEditorDemo-Info.plist */,
-				A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */,
-				A70A6D7E15DE7DA600C2568C /* main.m */,
-				A70A6D8015DE7DA600C2568C /* DTRichTextEditorDemo-Prefix.pch */,
+				A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */,
+				A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */,
+				A70A6D9515DE7E3D00C2568C /* Icon.png */,
+				A70A6D9615DE7E3D00C2568C /* Icon@2x.png */,
 			);
-			name = "Supporting Files";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A70A6D9715DE7E3D00C2568C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A70A6D9815DE7E3D00C2568C /* DTRichTextEditorAppDelegate.h */,
+				A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */,
+				A70A6D9A15DE7E3D00C2568C /* DTRichTextEditorViewController.h */,
+				A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */,
+				A70A6D9C15DE7E3D00C2568C /* main.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70A6D7D15DE7DA600C2568C /* InfoPlist.strings in Resources */,
-				A70A6D8915DE7DA600C2568C /* ViewController.xib in Resources */,
+				A70A6D9E15DE7E3D00C2568C /* 43-film-roll.png in Resources */,
+				A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */,
+				A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */,
+				A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,32 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70A6D7F15DE7DA600C2568C /* main.m in Sources */,
-				A70A6D8315DE7DA600C2568C /* AppDelegate.m in Sources */,
-				A70A6D8615DE7DA600C2568C /* ViewController.m in Sources */,
+				A70A6DA215DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m in Sources */,
+				A70A6DA315DE7E3D00C2568C /* DTRichTextEditorViewController.m in Sources */,
+				A70A6DA415DE7E3D00C2568C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A70A6D7B15DE7DA600C2568C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A70A6D7C15DE7DA600C2568C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A70A6D8715DE7DA600C2568C /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A70A6D8815DE7DA600C2568C /* en */,
-			);
-			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A70A6D8A15DE7DA600C2568C /* Debug */ = {
@@ -244,8 +265,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DTRichTextEditorDemo/DTRichTextEditorDemo-Prefix.pch";
-				INFOPLIST_FILE = "DTRichTextEditorDemo/DTRichTextEditorDemo-Info.plist";
+				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
+				INFOPLIST_FILE = "Demo/DTRichTextEditor-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -255,8 +276,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DTRichTextEditorDemo/DTRichTextEditorDemo-Prefix.pch";
-				INFOPLIST_FILE = "DTRichTextEditorDemo/DTRichTextEditorDemo-Info.plist";
+				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
+				INFOPLIST_FILE = "Demo/DTRichTextEditor-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
