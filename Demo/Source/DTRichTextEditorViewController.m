@@ -7,9 +7,9 @@
 //
 
 #import "DTRichTextEditorViewController.h"
-#import "NSAttributedString+HTML.h"
-#import "NSAttributedString+DTRichText.h"
-#import "DTCoreText.h"
+//#import <DTRichTextEditor/NSAttributedString+HTML.h>
+#import <DTRichTextEditor/NSAttributedString+DTRichText.h>
+//#import <DTRichTextEditor/DTCoreText.h>
 
 #import <AssetsLibrary/AssetsLibrary.h>
 

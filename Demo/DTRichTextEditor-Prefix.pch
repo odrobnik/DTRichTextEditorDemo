@@ -5,6 +5,7 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
+	#import <DTRichTextEditor/DTRichTextEditor.h>
 #endif
 
 // Allows variations to cater for different behavior on iOS than OSX to have similar visual output
