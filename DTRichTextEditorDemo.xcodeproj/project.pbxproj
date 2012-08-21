@@ -74,7 +74,6 @@
 			children = (
 				A70A6D8F15DE7E3D00C2568C /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
-				A70A6DA515DE7E7E00C2568C /* libxml2.dylib */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +89,7 @@
 		A70A6D7115DE7DA600C2568C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A70A6DA515DE7E7E00C2568C /* libxml2.dylib */,
 				A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */,
 				A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */,
 				A70A6DAD15DE7E9C00C2568C /* CoreText.framework */,
