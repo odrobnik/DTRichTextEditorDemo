@@ -6,4 +6,5 @@
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
 	#import <DTRichTextEditor/DTRichTextEditor.h>
+	#import <AssetsLibrary/AssetsLibrary.h>
 #endif

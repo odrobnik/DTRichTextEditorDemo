@@ -7,18 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DTRichTextEditor/DTRichTextEditorView.h>
+#import <DTRichTextEditor/DTRichTextEditor.h>
 
 @interface DTRichTextEditorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, DTAttributedTextContentViewDelegate> {
-
+	
 	IBOutlet DTRichTextEditorView *richEditor;
 	
 	UITextRange *lastSelection;
 	
 	BOOL isDirty;
-    UIPopoverController *popover;
-    
-    NSCache *_imageViewCache;
+	UIPopoverController *popover;
+	
+	NSCache *_imageViewCache;
 	
 	
 	// demonstrating inputAccessoryView
@@ -29,14 +29,18 @@
 	UIBarButtonItem *boldButton;
 	UIBarButtonItem *italicButton;
 	UIBarButtonItem *underlineButton;
-    
-    UIBarButtonItem *highlightButton;
+	UIBarButtonItem *highlightButton;
+	UIBarButtonItem *fontButton;
 	
 	// paragraph alignment buttons
 	UIBarButtonItem *leftAlignButton;
 	UIBarButtonItem *centerAlignButton;
 	UIBarButtonItem *rightAlignButton;
 	UIBarButtonItem *justifyAlignButton;
+	
+	// indent buttons
+	UIBarButtonItem *increaseIndentButton;
+	UIBarButtonItem *decreaseIndentButton;
 	
 	// lists
 	UIBarButtonItem *unorderedListButton;
