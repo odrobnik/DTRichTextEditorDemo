@@ -23,8 +23,6 @@
 		A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */; };
 		A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAD15DE7E9C00C2568C /* CoreText.framework */; };
 		A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAF15DE7EB000C2568C /* ImageIO.framework */; };
-		A743A7FC16CCE3D000B25266 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A743A7F816CCE3D000B25266 /* DTRichTextEditor.framework */; };
-		A743A7FD16CCE3D000B25266 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A743A7FB16CCE3D000B25266 /* DTLoupe.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +47,6 @@
 		A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A70A6DAD15DE7E9C00C2568C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A70A6DAF15DE7EB000C2568C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		A743A7F816CCE3D000B25266 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
-		A743A7FA16CCE3D000B25266 /* DTHTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHTMLParser.h; sourceTree = "<group>"; };
-		A743A7FB16CCE3D000B25266 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +63,6 @@
 				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
 				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
 				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
-				A743A7FC16CCE3D000B25266 /* DTRichTextEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +72,6 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
-				A743A7F716CCE3D000B25266 /* DTRichTextEditor.embeddedframework */,
 				A70A6D8F15DE7E3D00C2568C /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
@@ -143,24 +136,6 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		A743A7F716CCE3D000B25266 /* DTRichTextEditor.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				A743A7F816CCE3D000B25266 /* DTRichTextEditor.framework */,
-				A743A7F916CCE3D000B25266 /* Resources */,
-			);
-			path = DTRichTextEditor.embeddedframework;
-			sourceTree = "<group>";
-		};
-		A743A7F916CCE3D000B25266 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A743A7FA16CCE3D000B25266 /* DTHTMLParser.h */,
-				A743A7FB16CCE3D000B25266 /* DTLoupe.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,7 +191,6 @@
 				A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */,
 				A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */,
 				A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */,
-				A743A7FD16CCE3D000B25266 /* DTLoupe.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
