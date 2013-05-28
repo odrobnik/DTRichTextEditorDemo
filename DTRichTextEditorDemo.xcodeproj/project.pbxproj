@@ -30,8 +30,6 @@
 		A78CE6781754A28900DBDEC4 /* DTRichTextEditorTestStateController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6681754A28900DBDEC4 /* DTRichTextEditorTestStateController.m */; };
 		A78CE6791754A28900DBDEC4 /* DTRichTextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE66A1754A28900DBDEC4 /* DTRichTextEditorViewController.m */; };
 		A78CE67A1754A28900DBDEC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE66B1754A28900DBDEC4 /* main.m */; };
-		A78CE6861754A31200DBDEC4 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */; };
-		A78CE6871754A31200DBDEC4 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,15 +67,6 @@
 		A78CE6691754A28900DBDEC4 /* DTRichTextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorViewController.h; sourceTree = "<group>"; };
 		A78CE66A1754A28900DBDEC4 /* DTRichTextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorViewController.m; sourceTree = "<group>"; };
 		A78CE66B1754A28900DBDEC4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
-		A78CE67E1754A31200DBDEC4 /* DTAnchorHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAnchorHTMLElement.h; sourceTree = "<group>"; };
-		A78CE67F1754A31200DBDEC4 /* DTBreakHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBreakHTMLElement.h; sourceTree = "<group>"; };
-		A78CE6801754A31200DBDEC4 /* DTHorizontalRuleHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHorizontalRuleHTMLElement.h; sourceTree = "<group>"; };
-		A78CE6811754A31200DBDEC4 /* DTListItemHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTListItemHTMLElement.h; sourceTree = "<group>"; };
-		A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
-		A78CE6831754A31200DBDEC4 /* DTStylesheetHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStylesheetHTMLElement.h; sourceTree = "<group>"; };
-		A78CE6841754A31200DBDEC4 /* DTTextAttachmentHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextAttachmentHTMLElement.h; sourceTree = "<group>"; };
-		A78CE6851754A31200DBDEC4 /* DTTextHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextHTMLElement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +83,6 @@
 				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
 				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
 				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
-				A78CE6861754A31200DBDEC4 /* DTRichTextEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +92,6 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
-				A78CE67B1754A31200DBDEC4 /* DTRichTextEditor.embeddedframework */,
 				A78CE6511754A28900DBDEC4 /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
@@ -182,30 +169,6 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		A78CE67B1754A31200DBDEC4 /* DTRichTextEditor.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */,
-				A78CE67D1754A31200DBDEC4 /* Resources */,
-			);
-			path = DTRichTextEditor.embeddedframework;
-			sourceTree = "<group>";
-		};
-		A78CE67D1754A31200DBDEC4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A78CE67E1754A31200DBDEC4 /* DTAnchorHTMLElement.h */,
-				A78CE67F1754A31200DBDEC4 /* DTBreakHTMLElement.h */,
-				A78CE6801754A31200DBDEC4 /* DTHorizontalRuleHTMLElement.h */,
-				A78CE6811754A31200DBDEC4 /* DTListItemHTMLElement.h */,
-				A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */,
-				A78CE6831754A31200DBDEC4 /* DTStylesheetHTMLElement.h */,
-				A78CE6841754A31200DBDEC4 /* DTTextAttachmentHTMLElement.h */,
-				A78CE6851754A31200DBDEC4 /* DTTextHTMLElement.h */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,7 +225,6 @@
 				A78CE66F1754A28900DBDEC4 /* Icon.png in Resources */,
 				A78CE6701754A28900DBDEC4 /* Icon@2x.png in Resources */,
 				A78CE6711754A28900DBDEC4 /* test.html in Resources */,
-				A78CE6871754A31200DBDEC4 /* DTLoupe.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +317,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";
@@ -378,7 +339,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";

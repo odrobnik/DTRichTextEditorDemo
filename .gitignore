@@ -5,4 +5,3 @@ build
 project.xcworkspace
 xcuserdata
 .svn
-DTRichTextEditor.embeddedframework
