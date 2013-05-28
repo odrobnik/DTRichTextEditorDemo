@@ -162,11 +162,10 @@
 	}
 	
 	// make an attachment
-	DTTextAttachment *attachment = [[DTTextAttachment alloc] init];
-	attachment.contents = (id)image;
+	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] init];
+	attachment.image = image;
 	attachment.displaySize = image.size;
 	attachment.originalSize = image.size;
-	attachment.contentType = DTTextAttachmentTypeImage;
 	
 	[richEditor replaceRange:lastSelection withAttachment:attachment inParagraph:YES];
 }
@@ -250,11 +249,10 @@
 	UIImage *image = [UIImage imageNamed:@"icon_smile.gif"];
 	
 	// make an attachment
-	DTTextAttachment *attachment = [[DTTextAttachment alloc] init];
-	attachment.contents = (id)image;
+	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] init];
+	attachment.image = image;
 	attachment.displaySize = image.size;
 	attachment.originalSize = image.size;
-	attachment.contentType = DTTextAttachmentTypeImage;
 	attachment.verticalAlignment = DTTextAttachmentVerticalAlignmentCenter;
 	
 	[richEditor replaceRange:[richEditor selectedTextRange ] withAttachment:attachment inParagraph:NO];
@@ -421,13 +419,10 @@
 		return imageView;
 	}
 	
-	if (attachment.contentType == DTTextAttachmentTypeImage)
+	if ([attachment isKindOfClass:[DTImageTextAttachment class]])
 	{
 		imageView = [[UIImageView alloc] initWithFrame:frame];
-		if ([attachment.contents isKindOfClass:[UIImage class]])
-		{
-			imageView.image = attachment.contents;
-		}
+		imageView.image = [(DTImageTextAttachment *)attachment image];
 		
 		[self.imageViewCache setObject:imageView forKey:cacheKey];
 		

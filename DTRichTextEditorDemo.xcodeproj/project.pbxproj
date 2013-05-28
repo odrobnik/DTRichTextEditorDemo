@@ -23,6 +23,8 @@
 		A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */; };
 		A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAD15DE7E9C00C2568C /* CoreText.framework */; };
 		A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAF15DE7EB000C2568C /* ImageIO.framework */; };
+		A78CE63D17549D6D00DBDEC4 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */; };
+		A78CE63E17549D6D00DBDEC4 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,15 @@
 		A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A70A6DAD15DE7E9C00C2568C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A70A6DAF15DE7EB000C2568C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
+		A78CE63517549D6D00DBDEC4 /* DTAnchorHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAnchorHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63617549D6D00DBDEC4 /* DTBreakHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBreakHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63717549D6D00DBDEC4 /* DTHorizontalRuleHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHorizontalRuleHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63817549D6D00DBDEC4 /* DTListItemHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTListItemHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
+		A78CE63A17549D6D00DBDEC4 /* DTStylesheetHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStylesheetHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63B17549D6D00DBDEC4 /* DTTextAttachmentHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextAttachmentHTMLElement.h; sourceTree = "<group>"; };
+		A78CE63C17549D6D00DBDEC4 /* DTTextHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextHTMLElement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
 				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
 				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
+				A78CE63D17549D6D00DBDEC4 /* DTRichTextEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +84,7 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
+				A78CE63217549D6D00DBDEC4 /* DTRichTextEditor.embeddedframework */,
 				A70A6D8F15DE7E3D00C2568C /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
@@ -136,6 +149,30 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		A78CE63217549D6D00DBDEC4 /* DTRichTextEditor.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */,
+				A78CE63417549D6D00DBDEC4 /* Resources */,
+			);
+			path = DTRichTextEditor.embeddedframework;
+			sourceTree = "<group>";
+		};
+		A78CE63417549D6D00DBDEC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A78CE63517549D6D00DBDEC4 /* DTAnchorHTMLElement.h */,
+				A78CE63617549D6D00DBDEC4 /* DTBreakHTMLElement.h */,
+				A78CE63717549D6D00DBDEC4 /* DTHorizontalRuleHTMLElement.h */,
+				A78CE63817549D6D00DBDEC4 /* DTListItemHTMLElement.h */,
+				A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */,
+				A78CE63A17549D6D00DBDEC4 /* DTStylesheetHTMLElement.h */,
+				A78CE63B17549D6D00DBDEC4 /* DTTextAttachmentHTMLElement.h */,
+				A78CE63C17549D6D00DBDEC4 /* DTTextHTMLElement.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +228,7 @@
 				A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */,
 				A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */,
 				A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */,
+				A78CE63E17549D6D00DBDEC4 /* DTLoupe.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
