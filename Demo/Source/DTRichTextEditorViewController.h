@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <DTRichTextEditor/DTRichTextEditor.h>
+#import "DTFormatViewController.h"
 
-@interface DTRichTextEditorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, DTAttributedTextContentViewDelegate> {
-	
+@class DTRichTextEditorTestState, DTRichTextEditorTestStateController, DTFormatViewController;
+
+@interface DTRichTextEditorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, DTAttributedTextContentViewDelegate, DTRichTextEditorViewDelegate, DTFormatDelegate> {
+
 	IBOutlet DTRichTextEditorView *richEditor;
 	
 	UITextRange *lastSelection;
 	
-	BOOL isDirty;
-	UIPopoverController *popover;
-	
-	NSCache *_imageViewCache;
+    UIPopoverController *popover;
+    
+    NSCache *_imageViewCache;
 	
 	
 	// demonstrating inputAccessoryView
@@ -29,8 +31,7 @@
 	UIBarButtonItem *boldButton;
 	UIBarButtonItem *italicButton;
 	UIBarButtonItem *underlineButton;
-	UIBarButtonItem *highlightButton;
-	UIBarButtonItem *fontButton;
+    UIBarButtonItem *highlightButton;
 	
 	// paragraph alignment buttons
 	UIBarButtonItem *leftAlignButton;
@@ -48,8 +49,19 @@
 	
 	// URL
 	UIBarButtonItem *linkButton;
+    
+    // Insert Menu
+    BOOL _showInsertMenu;
 }
 
 @property (nonatomic, retain) NSCache *imageViewCache;
+
+@property (nonatomic, retain) NSArray *menuItems;
+@property (nonatomic, retain) DTRichTextEditorTestState *testState;
+@property (nonatomic, retain) UIPopoverController *testOptionsPopover;
+@property (nonatomic, retain) DTRichTextEditorTestStateController *testStateController;
+@property (nonatomic, retain) UIPopoverController *formatOptionsPopover;
+@property (nonatomic, retain) DTFormatViewController *formatViewController;
+
 @end
 
