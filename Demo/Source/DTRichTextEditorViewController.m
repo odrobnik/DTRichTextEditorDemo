@@ -7,82 +7,103 @@
 //
 
 #import "DTRichTextEditorViewController.h"
+#import <DTRichTextEditor/NSAttributedString+HTML.h>
+#import <DTRichTextEditor/NSAttributedString+DTRichText.h>
 #import <DTRichTextEditor/DTRichTextEditor.h>
+
+#import "DTRichTextEditorTestState.h"
+#import "DTRichTextEditorTestStateController.h"
+#import <DTRichTextEditor/DTCoreTextLayoutFrame.h>
+
+#import "DTFormatViewController.h"
+
+NSString *DTTestStateDataKey = @"DTTestStateDataKey";
 
 @implementation DTRichTextEditorViewController
 
-
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
+ // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
-	CGRect frame = [UIScreen mainScreen].applicationFrame;
-	
-	UIView *view = [[UIView alloc] initWithFrame:frame];
-	
-	richEditor = [[DTRichTextEditorView alloc] initWithFrame:view.bounds];
-	richEditor.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	richEditor.textDelegate = self;
-	
-	[view addSubview:richEditor];
-	
-	self.view = view;
+    CGRect frame = [UIScreen mainScreen].applicationFrame;
+    
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    
+    richEditor = [[DTRichTextEditorView alloc] initWithFrame:view.bounds];
+    richEditor.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    richEditor.textDelegate = self;
+    
+    [view addSubview:richEditor];
+    
+    self.view = view;
 }
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	
-	// if you want to show the keyboard after appearing
-	[richEditor becomeFirstResponder];
+    
+    // if you want to show the keyboard after appearing
+    [richEditor becomeFirstResponder];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	
+    [super viewDidLoad];
+    
+    // initialize test state
+    NSData *testStateData = [[NSUserDefaults standardUserDefaults] dataForKey:DTTestStateDataKey];
+    
+    if (testStateData)
+    {
+        self.testState = [NSKeyedUnarchiver unarchiveObjectWithData:testStateData];
+    }
+    else
+    {
+        self.testState = [[DTRichTextEditorTestState alloc] init];
+        self.testState.editable = YES;
+    }
+    
+    UIBarButtonItem *formatItem = [[UIBarButtonItem alloc] initWithTitle:@"Format"
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:@selector(presentFormatOptions:)];
+    UIBarButtonItem *testStateItem = [[UIBarButtonItem alloc] initWithTitle:@"Test Options" style:UIBarButtonItemStyleBordered target:self action:@selector(presentTestOptions:)];
+    self.navigationItem.rightBarButtonItems = @[formatItem, testStateItem];
+    
 	// defaults
+    [DTCoreTextLayoutFrame setShouldDrawDebugFrames:self.testState.shouldDrawDebugFrames];
+    
 	richEditor.baseURL = [NSURL URLWithString:@"http://www.drobnik.com"];
-	richEditor.textDelegate = self;
+    richEditor.textDelegate = self;
 	richEditor.defaultFontFamily = @"Helvetica";
-	richEditor.textSizeMultiplier = 2.2;
+	richEditor.textSizeMultiplier = 1.0;
 	richEditor.maxImageDisplaySize = CGSizeMake(300, 300);
-	richEditor.autocorrectionType = UITextAutocorrectionTypeNo;
+    richEditor.autocorrectionType = UITextAutocorrectionTypeYes;
+    richEditor.editable = self.testState.editable;
+    richEditor.editorViewDelegate = self;
+    richEditor.defaultFontSize = 30;
 	
 	NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
 	[defaults setObject:[NSNumber numberWithBool:YES] forKey:DTDefaultLinkDecoration];
 	[defaults setObject:[UIColor colorWithHTMLName:@"purple"] forKey:DTDefaultLinkColor];
 	
+    // demonstrate half em paragraph spacing
+    DTCSSStylesheet *styleSheet = [[DTCSSStylesheet alloc] initWithStyleBlock:@"p {margin-bottom:0.5em} ol {margin-bottom:0.5em} li {margin-bottom:0.5em}"];
+    [defaults setObject:styleSheet forKey:DTDefaultStyleSheet];
+    
 	richEditor.textDefaults = defaults;
-   
-	NSString *html = @"<p><span style=\"color:red;\">Hello</span> <b>bold</b> <i>italic</i> <span style=\"color: green;font-family:Courier;\">World!</span></p>";
+
+   // load initial string from file
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+	NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
 	[richEditor setHTMLString:html];
-	
-	//	[DTCoreTextLayoutFrame setShouldDrawDebugFrames:YES];
-	
+   
 	// image as drawn by your custom views which you return in the delegate method
 	richEditor.attributedTextContentView.shouldDrawImages = NO;
 	
 	photoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(insertPhoto:)];
-	photoButton.enabled = NO;
-	
-	boldButton = [[UIBarButtonItem alloc] initWithTitle:@"B" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleBold:)];
-	boldButton.enabled = NO;
-	
-	italicButton = [[UIBarButtonItem alloc] initWithTitle:@"I" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleItalic:)];
-	italicButton.enabled = NO;
-	
-	underlineButton = [[UIBarButtonItem alloc] initWithTitle:@"U" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleUnderline:)];
-	underlineButton.enabled = NO;
-	
-	highlightButton = [[UIBarButtonItem alloc] initWithTitle:@"H" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleHighlight:)];
-	highlightButton.enabled = NO;
-	
-	fontButton = [[UIBarButtonItem alloc] initWithTitle:@"Font" style:UIBarButtonItemStyleBordered target:self action:@selector(changeFont:)];
-	fontButton.enabled = NO;
-	
-	
-	
+    highlightButton = [[UIBarButtonItem alloc] initWithTitle:@"H" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleHighlight:)];
+
 	UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 	
 	leftAlignButton = [[UIBarButtonItem alloc] initWithTitle:@"L" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleLeft:)];
@@ -94,29 +115,27 @@
 	decreaseIndentButton = [[UIBarButtonItem alloc] initWithTitle:@"<-" style:UIBarButtonItemStyleBordered target:self action:@selector(decreaseIndent:)];
 	
 	UIBarButtonItem *spacer2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-	
+
 	UIBarButtonItem *spacer3 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 	
 	orderedListButton = [[UIBarButtonItem alloc] initWithTitle:@"1." style:UIBarButtonItemStyleBordered target:self action:@selector(toggleOrderedList:)];
 	unorderedListButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleUnorderedList:)];
-	
+
 	UIBarButtonItem *spacer4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 	
 	UIBarButtonItem *smile = [[UIBarButtonItem alloc] initWithTitle:@":)" style:UIBarButtonItemStyleBordered target:self action:@selector(insertSmiley:)];
 	
-	
+
 	linkButton = [[UIBarButtonItem alloc] initWithTitle:@"URL" style:UIBarButtonItemStyleBordered target:self action:@selector(toggleURL:)];
 	
 	toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
 	richEditor.inputAccessoryView = toolbar;
 	
-	[toolbar setItems:[NSArray arrayWithObjects:boldButton, italicButton, underlineButton, highlightButton, fontButton, spacer, leftAlignButton, centerAlignButton, rightAlignButton, justifyAlignButton, spacer2, increaseIndentButton, decreaseIndentButton, spacer3, orderedListButton, unorderedListButton, spacer4, photoButton, smile, linkButton, nil]];
-	
-	// watch the selectedTextRange property
-	[richEditor addObserver:self forKeyPath:@"selectedTextRange" options:NSKeyValueObservingOptionNew context:nil];
-	
-	// notification for isDirty
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:DTRichTextEditorTextDidBeginEditingNotification object:richEditor];
+	[toolbar setItems:[NSArray arrayWithObjects:highlightButton, spacer, leftAlignButton, centerAlignButton, rightAlignButton, justifyAlignButton, spacer2, increaseIndentButton, decreaseIndentButton, spacer3, orderedListButton, unorderedListButton, spacer4, photoButton, smile, linkButton, nil]];
+    
+    // notifications
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+	[center addObserver:self selector:@selector(menuDidHide:) name:UIMenuControllerDidHideMenuNotification object:nil];
 }
 
 
@@ -124,15 +143,15 @@
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations
-	//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // Return YES for supported orientations
+    //    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
 
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
-	[super didReceiveMemoryWarning];
+    [super didReceiveMemoryWarning];
 	
 	// Release any cached data, images, etc that aren't in use.
 }
@@ -143,13 +162,13 @@
 }
 
 
-- (void)dealloc
+- (void)dealloc 
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
 	[richEditor removeObserver:self forKeyPath:@"selectedTextRange"];
 	
-	popover.delegate = nil;
+    popover.delegate = nil;
 }
 
 #pragma mark Helpers
@@ -162,8 +181,8 @@
 	}
 	
 	// make an attachment
-	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] init];
-	attachment.image = image;
+	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] initWithElement:nil options:nil];
+	attachment.image = (id)image;
 	attachment.displaySize = image.size;
 	attachment.originalSize = image.size;
 	
@@ -176,40 +195,40 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
-	ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
-	{
-		ALAssetRepresentation *representation = [myasset defaultRepresentation];
-		
-		CGImageRef iref = [representation fullScreenImage];
-		if (iref) {
-			UIImage *theThumbnail = [UIImage imageWithCGImage:iref];
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *representation = [myasset defaultRepresentation];
+        
+        CGImageRef iref = [representation fullScreenImage];
+        if (iref) {
+            UIImage *theThumbnail = [UIImage imageWithCGImage:iref];
 			[self replaceCurrentSelectionWithPhoto:theThumbnail];
-		}
-	};
+        }
+    };
 	
 	
-	ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
-	{
-		NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
-	};
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+    {
+        NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
+    };
 	
-	if(imageURL)
-	{
-		ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
-		[assetslibrary assetForURL:imageURL
-							resultBlock:resultblock
-						  failureBlock:failureblock];
-	}
+    if(imageURL)
+    {
+        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+        [assetslibrary assetForURL:imageURL 
+                       resultBlock:resultblock
+                      failureBlock:failureblock];
+    }
 	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		[popover dismissPopoverAnimated:YES];
-		popover = nil;
-	}
-	else
-	{
-		[self dismissModalViewControllerAnimated:YES];
-	}
+        [popover dismissPopoverAnimated:YES];
+        popover = nil;
+    }
+    else
+    {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (void)insertPhoto:(UIBarButtonItem *)sender
@@ -222,6 +241,14 @@
 		return;
 	}
 	
+    if ([popover isPopoverVisible])
+    {
+        [popover dismissPopoverAnimated:YES];
+        popover = nil;
+        
+        return;
+    }
+    
 	UIImagePickerController *picker = [[UIImagePickerController alloc] init];
 	picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 	picker.delegate = self;
@@ -249,7 +276,7 @@
 	UIImage *image = [UIImage imageNamed:@"icon_smile.gif"];
 	
 	// make an attachment
-	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] init];
+	DTImageTextAttachment *attachment = [[DTImageTextAttachment alloc] initWithElement:nil options:nil];
 	attachment.image = image;
 	attachment.displaySize = image.size;
 	attachment.originalSize = image.size;
@@ -260,25 +287,7 @@
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
-	popover = nil;
-}
-
-- (void)toggleBold:(UIBarButtonItem *)sender
-{
-	UITextRange *range = richEditor.selectedTextRange;
-	[richEditor toggleBoldInRange:range];
-}
-
-- (void)toggleItalic:(UIBarButtonItem *)sender
-{
-	UITextRange *range = richEditor.selectedTextRange;
-	[richEditor toggleItalicInRange:range];
-}
-
-- (void)toggleUnderline:(UIBarButtonItem *)sender
-{
-	UITextRange *range = richEditor.selectedTextRange;
-	[richEditor toggleUnderlineInRange:range];
+    popover = nil;
 }
 
 - (void)toggleHighlight:(UIBarButtonItem *)sender
@@ -340,6 +349,7 @@
 	
 	DTCSSListStyle *listStyle = [[DTCSSListStyle alloc] init];
 	listStyle.startingItemNumber = 1;
+    listStyle.position = DTCSSListStylePositionOutside;
 	listStyle.type = DTCSSListStyleTypeDecimal;
 	
 	[richEditor toggleListStyle:listStyle inRange:range];
@@ -355,80 +365,32 @@
 	[richEditor toggleHyperlinkInRange:range URL:URL];
 }
 
-- (void)changeFont:(UIBarButtonItem *)sender
-{
-	UITextRange *range = richEditor.selectedTextRange;
-	
-	// for simplicity we set a static font, IRL you want to have a fancy font picker dialog
-	
-	// you can get the current font family and size (and other attributes like this:
-	
-	DTCoreTextFontDescriptor *fontDescriptor = [richEditor fontDescriptorForRange:range];
-	NSLog(@"font-family: %@, size: %.0f", fontDescriptor.fontFamily, fontDescriptor.pointSize);
-	
-	[richEditor updateFontInRange:range withFontFamilyName:@"American Typewriter" pointSize:60];
-}
-
-#pragma mark Notifications
-- (void)textChanged:(NSNotification *)notification
-{
-	isDirty = YES;
-	//NSLog(@"Text Changed");
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-	if ([keyPath isEqualToString:@"selectedTextRange"])
-	{
-		id newRange = [change objectForKey:NSKeyValueChangeNewKey];
-		
-		// disable photo/bold button if there is no selection
-		if (newRange == [NSNull null])
-		{
-			for (UIBarButtonItem *oneItem in toolbar.items)
-			{
-				oneItem.enabled = NO;
-			}
-		}
-		else
-		{
-			for (UIBarButtonItem *oneItem in toolbar.items)
-			{
-				oneItem.enabled = YES;
-			}
-			
-			if (richEditor.selectedTextRange.start)
-			{
-				lastSelection = richEditor.selectedTextRange;
-			}
-		}
-	}
-}
-
 #pragma mark - DTAttributedTextContentViewDelegate
 
 - (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttachment:(DTTextAttachment *)attachment frame:(CGRect)frame
 {
-	NSNumber *cacheKey = [NSNumber numberWithUnsignedInteger:[attachment hash]];
-	
-	UIImageView *imageView = [self.imageViewCache objectForKey:cacheKey];
-	
-	if (imageView)
+    NSNumber *cacheKey = [NSNumber numberWithUnsignedInteger:[attachment hash]];
+    
+    UIImageView *imageView = [self.imageViewCache objectForKey:cacheKey];
+    
+    if (imageView)
+    {
+        imageView.frame = frame;
+        return imageView;
+    }
+    
+    if ([attachment isKindOfClass:[DTImageTextAttachment class]])
 	{
-		imageView.frame = frame;
-		return imageView;
-	}
-	
-	if ([attachment isKindOfClass:[DTImageTextAttachment class]])
-	{
-		imageView = [[UIImageView alloc] initWithFrame:frame];
-		imageView.image = [(DTImageTextAttachment *)attachment image];
-		
-		[self.imageViewCache setObject:imageView forKey:cacheKey];
-		
-		return imageView;
-	}
-	
+        DTImageTextAttachment *imageAttachment = (DTImageTextAttachment *)attachment;
+        
+        imageView = [[UIImageView alloc] initWithFrame:frame];
+        imageView.image = imageAttachment.image;
+        
+        [self.imageViewCache setObject:imageView forKey:cacheKey];
+        
+        return imageView;
+    }
+    
 	
 	return nil;
 }
@@ -456,18 +418,261 @@
 }
 
 
+#pragma mark - Presenting Test Options
+
+@synthesize testOptionsPopover = _testOptionsPopover;
+
+- (void)presentTestOptions:(id)sender
+{
+    if(!self.testStateController){
+        DTRichTextEditorTestStateController *controller = [[DTRichTextEditorTestStateController alloc] initWithStyle:UITableViewStylePlain];
+        controller.testState = self.testState;
+        controller.completion = ^(DTRichTextEditorTestState *modifiedTestState) {
+            // Store test state in user defaults
+            NSData *testStateData = [NSKeyedArchiver archivedDataWithRootObject:modifiedTestState];
+            [[NSUserDefaults standardUserDefaults] setObject:testStateData forKey:DTTestStateDataKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            // Update editable
+            richEditor.editable = modifiedTestState.editable;
+            
+            // Update debug frames
+            [DTCoreTextLayoutFrame setShouldDrawDebugFrames:modifiedTestState.shouldDrawDebugFrames];
+            [richEditor.attributedTextContentView setNeedsDisplay];
+        };
+        
+        self.testStateController = controller;
+    }
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        if (self.testOptionsPopover == nil)
+        {
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.testStateController];
+            UIPopoverController *toPopover = [[UIPopoverController alloc] initWithContentViewController:navController];
+            
+            self.testOptionsPopover = toPopover;
+        }
+        
+        [self.testOptionsPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        self.testOptionsPopover.passthroughViews = nil;
+    }
+    else
+    {
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.testStateController];
+        
+        [self presentViewController:navController
+                           animated:YES
+                         completion:nil];
+    }
+}
+
+
+#pragma mark - Presenting Format Options
+
+@synthesize formatOptionsPopover = _formatOptionsPopover;
+
+- (void)presentFormatOptions:(id)sender
+{
+    if (!self.formatViewController)
+    {
+        DTFormatViewController *controller = [[DTFormatViewController alloc] init];
+        controller.formatDelegate = self;
+        self.formatViewController = controller;
+    }
+    
+    [self.formatViewController popToRootViewControllerAnimated:NO];
+    self.formatViewController.fontDescriptor = [richEditor fontDescriptorForRange:richEditor.selectedTextRange];
+    
+    NSDictionary *attributesDictionary = [richEditor typingAttributesForRange:richEditor.selectedTextRange];
+    
+    self.formatViewController.underline = (attributesDictionary[@"NSUnderline"] != nil);
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        if (self.formatOptionsPopover == nil)
+        {
+            UIPopoverController *toPopover = [[UIPopoverController alloc] initWithContentViewController:self.formatViewController];
+            
+            self.formatOptionsPopover = toPopover;
+        }
+        
+        [self.formatOptionsPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        self.formatOptionsPopover.passthroughViews = nil;
+        
+    }
+	else
+	{
+		richEditor.inputAccessoryView = nil; // no accessory on next inputView change
+		[richEditor setInputView:self.formatViewController.view animated:YES];
+    }
+}
+
+
+#pragma mark - DTRichTextEditorViewDelegate
+
+- (BOOL)editorViewShouldBeginEditing:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewShouldBeginEditing:");
+    return !self.testState.blockShouldBeginEditing;
+}
+
+- (void)editorViewDidBeginEditing:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewDidBeginEditing:");
+}
+
+- (BOOL)editorViewShouldEndEditing:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewShouldEndEditing:");
+    return !self.testState.blockShouldEndEditing;
+}
+
+- (void)editorViewDidEndEditing:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewDidEndEditing:");
+}
+
+- (BOOL)editorView:(DTRichTextEditorView *)editorView shouldChangeTextInRange:(NSRange)range replacementText:(NSAttributedString *)text
+{
+    NSLog(@"editorView:shouldChangeTextInRange:replacementText:");
+    
+    return YES;
+}
+
+- (void)editorViewDidChangeSelection:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewDidChangeSelection:");
+    
+    if( self.formatViewController && [richEditor inputView] == self.formatViewController.view ){
+        self.formatViewController.fontDescriptor = [richEditor fontDescriptorForRange:richEditor.selectedTextRange];
+    }
+}
+
+- (void)editorViewDidChange:(DTRichTextEditorView *)editorView
+{
+    NSLog(@"editorViewDidChange:");
+}
+
+@synthesize menuItems = _menuItems;
+
+- (NSArray *)menuItems
+{
+    if (_menuItems == nil)
+    {
+        UIMenuItem *insertItem = [[UIMenuItem alloc] initWithTitle:@"Insert" action:@selector(displayInsertMenu:)];
+        UIMenuItem *insertStarItem = [[UIMenuItem alloc] initWithTitle:@"★" action:@selector(insertStar:)];
+        UIMenuItem *insertCheckItem = [[UIMenuItem alloc] initWithTitle:@"☆" action:@selector(insertWhiteStar:)];
+        _menuItems = @[insertItem, insertStarItem, insertCheckItem];
+    }
+    
+    return _menuItems;
+}
+
+- (BOOL)editorView:(DTRichTextEditorView *)editorView canPerformAction:(SEL)action withSender:(id)sender
+{
+    DTTextRange *selectedTextRange = (DTTextRange *)editorView.selectedTextRange;
+    BOOL hasSelection = ![selectedTextRange isEmpty];
+    
+    if (action == @selector(insertStar:) || action == @selector(insertWhiteStar:))
+    {
+        return _showInsertMenu;
+    }
+    
+    if (_showInsertMenu)
+    {
+        return NO;
+    }
+    
+    if (action == @selector(displayInsertMenu:))
+    {
+        return (!hasSelection && _showInsertMenu == NO);
+    }
+    
+    // For fun, disable selectAll:
+    if (action == @selector(selectAll:))
+    {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)menuDidHide:(NSNotification *)notification
+{
+    _showInsertMenu = NO;
+}
+
+- (void)displayInsertMenu:(id)sender
+{
+    _showInsertMenu = YES;
+    
+    [[UIMenuController sharedMenuController] setMenuVisible:YES animated:YES];
+}
+
+- (void)insertStar:(id)sender
+{
+    _showInsertMenu = NO;
+    
+    [richEditor insertText:@"★"];
+}
+
+- (void)insertWhiteStar:(id)sender
+{
+    _showInsertMenu = NO;
+    
+    [richEditor insertText:@"☆"];
+}
+
+
 #pragma mark Properties
 
 - (NSCache *)imageViewCache
 {
-	if (!_imageViewCache)
-	{
-		_imageViewCache = [[NSCache alloc] init];
-	}
-	
-	return _imageViewCache;
+    if (!_imageViewCache)
+    {
+        _imageViewCache = [[NSCache alloc] init];
+    }
+    
+    return _imageViewCache;
 }
 
 @synthesize imageViewCache = _imageViewCache;
+
+#pragma mark - DTFormatDelegate
+- (void)formatDidSelectFont:(DTCoreTextFontDescriptor *)font
+{
+    [richEditor updateFontInRange:richEditor.selectedTextRange
+               withFontFamilyName:font.fontFamily
+                        pointSize:font.pointSize];
+}
+
+- (void)formatDidToggleBold
+{
+    [richEditor toggleBoldInRange:richEditor.selectedTextRange];
+}
+
+- (void)formatDidToggleItalic
+{
+    [richEditor toggleItalicInRange:richEditor.selectedTextRange];
+}
+
+- (void)formatDidToggleUnderline
+{
+    [richEditor toggleUnderlineInRange:richEditor.selectedTextRange];
+}
+
+- (void)formatDidToggleStrikethrough
+{
+    [richEditor toggleStrikethroughInRange:richEditor.selectedTextRange];
+}
+
+- (void)formatViewControllerUserDidFinish:(DTFormatViewController *)formatController
+{
+    // called only by tapping `done` in iPhone UI
+    
+	richEditor.inputAccessoryView = toolbar; // restore accessory on next inputView change
+	[richEditor setInputView:nil animated:YES];
+}
 
 @end

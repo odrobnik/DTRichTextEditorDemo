@@ -10,21 +10,28 @@
 		A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7215DE7DA600C2568C /* UIKit.framework */; };
 		A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7415DE7DA600C2568C /* Foundation.framework */; };
 		A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */; };
-		A70A6D9E15DE7E3D00C2568C /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */; };
-		A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */; };
-		A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9515DE7E3D00C2568C /* Icon.png */; };
-		A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70A6D9615DE7E3D00C2568C /* Icon@2x.png */; };
-		A70A6DA215DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */; };
-		A70A6DA315DE7E3D00C2568C /* DTRichTextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */; };
-		A70A6DA415DE7E3D00C2568C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70A6D9C15DE7E3D00C2568C /* main.m */; };
 		A70A6DA615DE7E7E00C2568C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA515DE7E7E00C2568C /* libxml2.dylib */; };
 		A70A6DA815DE7E8600C2568C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */; };
 		A70A6DAA15DE7E8D00C2568C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DA915DE7E8D00C2568C /* MediaPlayer.framework */; };
 		A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */; };
 		A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAD15DE7E9C00C2568C /* CoreText.framework */; };
 		A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAF15DE7EB000C2568C /* ImageIO.framework */; };
-		A78CE63D17549D6D00DBDEC4 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */; };
-		A78CE63E17549D6D00DBDEC4 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */; };
+		A78CE66D1754A28900DBDEC4 /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6551754A28900DBDEC4 /* 43-film-roll.png */; };
+		A78CE66E1754A28900DBDEC4 /* 43-film-roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6561754A28900DBDEC4 /* 43-film-roll@2x.png */; };
+		A78CE66F1754A28900DBDEC4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6571754A28900DBDEC4 /* Icon.png */; };
+		A78CE6701754A28900DBDEC4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6581754A28900DBDEC4 /* Icon@2x.png */; };
+		A78CE6711754A28900DBDEC4 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6591754A28900DBDEC4 /* test.html */; };
+		A78CE6721754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE65C1754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.m */; };
+		A78CE6731754A28900DBDEC4 /* DTFormatOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE65E1754A28900DBDEC4 /* DTFormatOverviewViewController.m */; };
+		A78CE6741754A28900DBDEC4 /* DTFormatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6601754A28900DBDEC4 /* DTFormatTableView.m */; };
+		A78CE6751754A28900DBDEC4 /* DTFormatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6621754A28900DBDEC4 /* DTFormatViewController.m */; };
+		A78CE6761754A28900DBDEC4 /* DTRichTextEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6641754A28900DBDEC4 /* DTRichTextEditorAppDelegate.m */; };
+		A78CE6771754A28900DBDEC4 /* DTRichTextEditorTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6661754A28900DBDEC4 /* DTRichTextEditorTestState.m */; };
+		A78CE6781754A28900DBDEC4 /* DTRichTextEditorTestStateController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE6681754A28900DBDEC4 /* DTRichTextEditorTestStateController.m */; };
+		A78CE6791754A28900DBDEC4 /* DTRichTextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE66A1754A28900DBDEC4 /* DTRichTextEditorViewController.m */; };
+		A78CE67A1754A28900DBDEC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A78CE66B1754A28900DBDEC4 /* main.m */; };
+		A78CE6861754A31200DBDEC4 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */; };
+		A78CE6871754A31200DBDEC4 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,32 +39,45 @@
 		A70A6D7215DE7DA600C2568C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A70A6D7415DE7DA600C2568C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A70A6D7615DE7DA600C2568C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A70A6D9015DE7E3D00C2568C /* DTRichTextEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTRichTextEditor-Info.plist"; sourceTree = "<group>"; };
-		A70A6D9115DE7E3D00C2568C /* DTRichTextEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditor-Prefix.pch"; sourceTree = "<group>"; };
-		A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
-		A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll@2x.png"; sourceTree = "<group>"; };
-		A70A6D9515DE7E3D00C2568C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		A70A6D9615DE7E3D00C2568C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		A70A6D9815DE7E3D00C2568C /* DTRichTextEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorAppDelegate.h; sourceTree = "<group>"; };
-		A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorAppDelegate.m; sourceTree = "<group>"; };
-		A70A6D9A15DE7E3D00C2568C /* DTRichTextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorViewController.h; sourceTree = "<group>"; };
-		A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorViewController.m; sourceTree = "<group>"; };
-		A70A6D9C15DE7E3D00C2568C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A70A6DA515DE7E7E00C2568C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		A70A6DA715DE7E8600C2568C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		A70A6DA915DE7E8D00C2568C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A70A6DAD15DE7E9C00C2568C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A70A6DAF15DE7EB000C2568C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
-		A78CE63517549D6D00DBDEC4 /* DTAnchorHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAnchorHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63617549D6D00DBDEC4 /* DTBreakHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBreakHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63717549D6D00DBDEC4 /* DTHorizontalRuleHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHorizontalRuleHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63817549D6D00DBDEC4 /* DTListItemHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTListItemHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
-		A78CE63A17549D6D00DBDEC4 /* DTStylesheetHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStylesheetHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63B17549D6D00DBDEC4 /* DTTextAttachmentHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextAttachmentHTMLElement.h; sourceTree = "<group>"; };
-		A78CE63C17549D6D00DBDEC4 /* DTTextHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6521754A28900DBDEC4 /* DTRichTextEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTRichTextEditor-Info.plist"; sourceTree = "<group>"; };
+		A78CE6531754A28900DBDEC4 /* DTRichTextEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditor-Prefix.pch"; sourceTree = "<group>"; };
+		A78CE6551754A28900DBDEC4 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
+		A78CE6561754A28900DBDEC4 /* 43-film-roll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll@2x.png"; sourceTree = "<group>"; };
+		A78CE6571754A28900DBDEC4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A78CE6581754A28900DBDEC4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		A78CE6591754A28900DBDEC4 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		A78CE65B1754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatFontFamilyTableViewController.h; sourceTree = "<group>"; };
+		A78CE65C1754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatFontFamilyTableViewController.m; sourceTree = "<group>"; };
+		A78CE65D1754A28900DBDEC4 /* DTFormatOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatOverviewViewController.h; sourceTree = "<group>"; };
+		A78CE65E1754A28900DBDEC4 /* DTFormatOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatOverviewViewController.m; sourceTree = "<group>"; };
+		A78CE65F1754A28900DBDEC4 /* DTFormatTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatTableView.h; sourceTree = "<group>"; };
+		A78CE6601754A28900DBDEC4 /* DTFormatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatTableView.m; sourceTree = "<group>"; };
+		A78CE6611754A28900DBDEC4 /* DTFormatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatViewController.h; sourceTree = "<group>"; };
+		A78CE6621754A28900DBDEC4 /* DTFormatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatViewController.m; sourceTree = "<group>"; };
+		A78CE6631754A28900DBDEC4 /* DTRichTextEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorAppDelegate.h; sourceTree = "<group>"; };
+		A78CE6641754A28900DBDEC4 /* DTRichTextEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorAppDelegate.m; sourceTree = "<group>"; };
+		A78CE6651754A28900DBDEC4 /* DTRichTextEditorTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorTestState.h; sourceTree = "<group>"; };
+		A78CE6661754A28900DBDEC4 /* DTRichTextEditorTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorTestState.m; sourceTree = "<group>"; };
+		A78CE6671754A28900DBDEC4 /* DTRichTextEditorTestStateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorTestStateController.h; sourceTree = "<group>"; };
+		A78CE6681754A28900DBDEC4 /* DTRichTextEditorTestStateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorTestStateController.m; sourceTree = "<group>"; };
+		A78CE6691754A28900DBDEC4 /* DTRichTextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorViewController.h; sourceTree = "<group>"; };
+		A78CE66A1754A28900DBDEC4 /* DTRichTextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorViewController.m; sourceTree = "<group>"; };
+		A78CE66B1754A28900DBDEC4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
+		A78CE67E1754A31200DBDEC4 /* DTAnchorHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAnchorHTMLElement.h; sourceTree = "<group>"; };
+		A78CE67F1754A31200DBDEC4 /* DTBreakHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBreakHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6801754A31200DBDEC4 /* DTHorizontalRuleHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHorizontalRuleHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6811754A31200DBDEC4 /* DTListItemHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTListItemHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
+		A78CE6831754A31200DBDEC4 /* DTStylesheetHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStylesheetHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6841754A31200DBDEC4 /* DTTextAttachmentHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextAttachmentHTMLElement.h; sourceTree = "<group>"; };
+		A78CE6851754A31200DBDEC4 /* DTTextHTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextHTMLElement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +94,7 @@
 				A70A6D7315DE7DA600C2568C /* UIKit.framework in Frameworks */,
 				A70A6D7515DE7DA600C2568C /* Foundation.framework in Frameworks */,
 				A70A6D7715DE7DA600C2568C /* CoreGraphics.framework in Frameworks */,
-				A78CE63D17549D6D00DBDEC4 /* DTRichTextEditor.framework in Frameworks */,
+				A78CE6861754A31200DBDEC4 /* DTRichTextEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +104,8 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
-				A78CE63217549D6D00DBDEC4 /* DTRichTextEditor.embeddedframework */,
-				A70A6D8F15DE7E3D00C2568C /* Demo */,
+				A78CE67B1754A31200DBDEC4 /* DTRichTextEditor.embeddedframework */,
+				A78CE6511754A28900DBDEC4 /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
 			);
@@ -115,60 +135,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A70A6D8F15DE7E3D00C2568C /* Demo */ = {
+		A78CE6511754A28900DBDEC4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D9015DE7E3D00C2568C /* DTRichTextEditor-Info.plist */,
-				A70A6D9115DE7E3D00C2568C /* DTRichTextEditor-Prefix.pch */,
-				A70A6D9215DE7E3D00C2568C /* Resources */,
-				A70A6D9715DE7E3D00C2568C /* Source */,
+				A78CE6521754A28900DBDEC4 /* DTRichTextEditor-Info.plist */,
+				A78CE6531754A28900DBDEC4 /* DTRichTextEditor-Prefix.pch */,
+				A78CE6541754A28900DBDEC4 /* Resources */,
+				A78CE65A1754A28900DBDEC4 /* Source */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		A70A6D9215DE7E3D00C2568C /* Resources */ = {
+		A78CE6541754A28900DBDEC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D9315DE7E3D00C2568C /* 43-film-roll.png */,
-				A70A6D9415DE7E3D00C2568C /* 43-film-roll@2x.png */,
-				A70A6D9515DE7E3D00C2568C /* Icon.png */,
-				A70A6D9615DE7E3D00C2568C /* Icon@2x.png */,
+				A78CE6551754A28900DBDEC4 /* 43-film-roll.png */,
+				A78CE6561754A28900DBDEC4 /* 43-film-roll@2x.png */,
+				A78CE6571754A28900DBDEC4 /* Icon.png */,
+				A78CE6581754A28900DBDEC4 /* Icon@2x.png */,
+				A78CE6591754A28900DBDEC4 /* test.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A70A6D9715DE7E3D00C2568C /* Source */ = {
+		A78CE65A1754A28900DBDEC4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A70A6D9815DE7E3D00C2568C /* DTRichTextEditorAppDelegate.h */,
-				A70A6D9915DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m */,
-				A70A6D9A15DE7E3D00C2568C /* DTRichTextEditorViewController.h */,
-				A70A6D9B15DE7E3D00C2568C /* DTRichTextEditorViewController.m */,
-				A70A6D9C15DE7E3D00C2568C /* main.m */,
+				A78CE65B1754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.h */,
+				A78CE65C1754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.m */,
+				A78CE65D1754A28900DBDEC4 /* DTFormatOverviewViewController.h */,
+				A78CE65E1754A28900DBDEC4 /* DTFormatOverviewViewController.m */,
+				A78CE65F1754A28900DBDEC4 /* DTFormatTableView.h */,
+				A78CE6601754A28900DBDEC4 /* DTFormatTableView.m */,
+				A78CE6611754A28900DBDEC4 /* DTFormatViewController.h */,
+				A78CE6621754A28900DBDEC4 /* DTFormatViewController.m */,
+				A78CE6631754A28900DBDEC4 /* DTRichTextEditorAppDelegate.h */,
+				A78CE6641754A28900DBDEC4 /* DTRichTextEditorAppDelegate.m */,
+				A78CE6651754A28900DBDEC4 /* DTRichTextEditorTestState.h */,
+				A78CE6661754A28900DBDEC4 /* DTRichTextEditorTestState.m */,
+				A78CE6671754A28900DBDEC4 /* DTRichTextEditorTestStateController.h */,
+				A78CE6681754A28900DBDEC4 /* DTRichTextEditorTestStateController.m */,
+				A78CE6691754A28900DBDEC4 /* DTRichTextEditorViewController.h */,
+				A78CE66A1754A28900DBDEC4 /* DTRichTextEditorViewController.m */,
+				A78CE66B1754A28900DBDEC4 /* main.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		A78CE63217549D6D00DBDEC4 /* DTRichTextEditor.embeddedframework */ = {
+		A78CE67B1754A31200DBDEC4 /* DTRichTextEditor.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				A78CE63317549D6D00DBDEC4 /* DTRichTextEditor.framework */,
-				A78CE63417549D6D00DBDEC4 /* Resources */,
+				A78CE67C1754A31200DBDEC4 /* DTRichTextEditor.framework */,
+				A78CE67D1754A31200DBDEC4 /* Resources */,
 			);
 			path = DTRichTextEditor.embeddedframework;
 			sourceTree = "<group>";
 		};
-		A78CE63417549D6D00DBDEC4 /* Resources */ = {
+		A78CE67D1754A31200DBDEC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A78CE63517549D6D00DBDEC4 /* DTAnchorHTMLElement.h */,
-				A78CE63617549D6D00DBDEC4 /* DTBreakHTMLElement.h */,
-				A78CE63717549D6D00DBDEC4 /* DTHorizontalRuleHTMLElement.h */,
-				A78CE63817549D6D00DBDEC4 /* DTListItemHTMLElement.h */,
-				A78CE63917549D6D00DBDEC4 /* DTLoupe.bundle */,
-				A78CE63A17549D6D00DBDEC4 /* DTStylesheetHTMLElement.h */,
-				A78CE63B17549D6D00DBDEC4 /* DTTextAttachmentHTMLElement.h */,
-				A78CE63C17549D6D00DBDEC4 /* DTTextHTMLElement.h */,
+				A78CE67E1754A31200DBDEC4 /* DTAnchorHTMLElement.h */,
+				A78CE67F1754A31200DBDEC4 /* DTBreakHTMLElement.h */,
+				A78CE6801754A31200DBDEC4 /* DTHorizontalRuleHTMLElement.h */,
+				A78CE6811754A31200DBDEC4 /* DTListItemHTMLElement.h */,
+				A78CE6821754A31200DBDEC4 /* DTLoupe.bundle */,
+				A78CE6831754A31200DBDEC4 /* DTStylesheetHTMLElement.h */,
+				A78CE6841754A31200DBDEC4 /* DTTextAttachmentHTMLElement.h */,
+				A78CE6851754A31200DBDEC4 /* DTTextHTMLElement.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,7 +232,7 @@
 		A70A6D6515DE7DA600C2568C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Cocoanetics;
 			};
 			buildConfigurationList = A70A6D6815DE7DA600C2568C /* Build configuration list for PBXProject "DTRichTextEditorDemo" */;
@@ -224,11 +257,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70A6D9E15DE7E3D00C2568C /* 43-film-roll.png in Resources */,
-				A70A6D9F15DE7E3D00C2568C /* 43-film-roll@2x.png in Resources */,
-				A70A6DA015DE7E3D00C2568C /* Icon.png in Resources */,
-				A70A6DA115DE7E3D00C2568C /* Icon@2x.png in Resources */,
-				A78CE63E17549D6D00DBDEC4 /* DTLoupe.bundle in Resources */,
+				A78CE66D1754A28900DBDEC4 /* 43-film-roll.png in Resources */,
+				A78CE66E1754A28900DBDEC4 /* 43-film-roll@2x.png in Resources */,
+				A78CE66F1754A28900DBDEC4 /* Icon.png in Resources */,
+				A78CE6701754A28900DBDEC4 /* Icon@2x.png in Resources */,
+				A78CE6711754A28900DBDEC4 /* test.html in Resources */,
+				A78CE6871754A31200DBDEC4 /* DTLoupe.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70A6DA215DE7E3D00C2568C /* DTRichTextEditorAppDelegate.m in Sources */,
-				A70A6DA315DE7E3D00C2568C /* DTRichTextEditorViewController.m in Sources */,
-				A70A6DA415DE7E3D00C2568C /* main.m in Sources */,
+				A78CE6721754A28900DBDEC4 /* DTFormatFontFamilyTableViewController.m in Sources */,
+				A78CE6731754A28900DBDEC4 /* DTFormatOverviewViewController.m in Sources */,
+				A78CE6741754A28900DBDEC4 /* DTFormatTableView.m in Sources */,
+				A78CE6751754A28900DBDEC4 /* DTFormatViewController.m in Sources */,
+				A78CE6761754A28900DBDEC4 /* DTRichTextEditorAppDelegate.m in Sources */,
+				A78CE6771754A28900DBDEC4 /* DTRichTextEditorTestState.m in Sources */,
+				A78CE6781754A28900DBDEC4 /* DTRichTextEditorTestStateController.m in Sources */,
+				A78CE6791754A28900DBDEC4 /* DTRichTextEditorViewController.m in Sources */,
+				A78CE67A1754A28900DBDEC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +295,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -271,6 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -283,6 +327,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -293,6 +340,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -302,18 +350,22 @@
 		A70A6D8D15DE7DA600C2568C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
 				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";
 				INFOPLIST_FILE = "Demo/DTRichTextEditor-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DTRichTextEditor.embeddedframework/Headers\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -321,18 +373,22 @@
 		A70A6D8E15DE7DA600C2568C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
 				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";
 				INFOPLIST_FILE = "Demo/DTRichTextEditor-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DTRichTextEditor.embeddedframework/Headers\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

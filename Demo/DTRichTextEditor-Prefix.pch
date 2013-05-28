@@ -5,6 +5,10 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
-	#import <DTRichTextEditor/DTRichTextEditor.h>
 	#import <AssetsLibrary/AssetsLibrary.h>
+	#import <QuartzCore/QuartzCore.h>
+
+	#import <DTRichTextEditor/DTRichTextEditor.h>
+	#import <DTRichTextEditor/DTCoreText.h>
+
 #endif
