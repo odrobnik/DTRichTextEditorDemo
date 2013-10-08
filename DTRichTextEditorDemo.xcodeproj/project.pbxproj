@@ -16,6 +16,9 @@
 		A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */; };
 		A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAD15DE7E9C00C2568C /* CoreText.framework */; };
 		A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70A6DAF15DE7EB000C2568C /* ImageIO.framework */; };
+		A735986F180410CA004C7930 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A735986C180410CA004C7930 /* DTRichTextEditor.framework */; };
+		A7359870180410CA004C7930 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A735986E180410CA004C7930 /* DTLoupe.bundle */; };
+		A7359872180419AE004C7930 /* icon_smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = A7359871180419AE004C7930 /* icon_smile.gif */; };
 		A78CE66D1754A28900DBDEC4 /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6551754A28900DBDEC4 /* 43-film-roll.png */; };
 		A78CE66E1754A28900DBDEC4 /* 43-film-roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6561754A28900DBDEC4 /* 43-film-roll@2x.png */; };
 		A78CE66F1754A28900DBDEC4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A78CE6571754A28900DBDEC4 /* Icon.png */; };
@@ -43,6 +46,9 @@
 		A70A6DAB15DE7E9600C2568C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A70A6DAD15DE7E9C00C2568C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A70A6DAF15DE7EB000C2568C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A735986C180410CA004C7930 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
+		A735986E180410CA004C7930 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
+		A7359871180419AE004C7930 /* icon_smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_smile.gif; sourceTree = "<group>"; };
 		A78CE6521754A28900DBDEC4 /* DTRichTextEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTRichTextEditor-Info.plist"; sourceTree = "<group>"; };
 		A78CE6531754A28900DBDEC4 /* DTRichTextEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTRichTextEditor-Prefix.pch"; sourceTree = "<group>"; };
 		A78CE6551754A28900DBDEC4 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			files = (
 				A70A6DB015DE7EB000C2568C /* ImageIO.framework in Frameworks */,
 				A70A6DAE15DE7E9C00C2568C /* CoreText.framework in Frameworks */,
+				A735986F180410CA004C7930 /* DTRichTextEditor.framework in Frameworks */,
 				A70A6DAC15DE7E9600C2568C /* QuartzCore.framework in Frameworks */,
 				A70A6DAA15DE7E8D00C2568C /* MediaPlayer.framework in Frameworks */,
 				A70A6DA815DE7E8600C2568C /* AssetsLibrary.framework in Frameworks */,
@@ -92,6 +99,7 @@
 		A70A6D6315DE7DA600C2568C = {
 			isa = PBXGroup;
 			children = (
+				A735986B180410CA004C7930 /* DTRichTextEditor.embeddedframework */,
 				A78CE6511754A28900DBDEC4 /* Demo */,
 				A70A6D7115DE7DA600C2568C /* Frameworks */,
 				A70A6D6F15DE7DA600C2568C /* Products */,
@@ -122,6 +130,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A735986B180410CA004C7930 /* DTRichTextEditor.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				A735986C180410CA004C7930 /* DTRichTextEditor.framework */,
+				A735986D180410CA004C7930 /* Resources */,
+			);
+			path = DTRichTextEditor.embeddedframework;
+			sourceTree = "<group>";
+		};
+		A735986D180410CA004C7930 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A735986E180410CA004C7930 /* DTLoupe.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A78CE6511754A28900DBDEC4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +161,7 @@
 		A78CE6541754A28900DBDEC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A7359871180419AE004C7930 /* icon_smile.gif */,
 				A78CE6551754A28900DBDEC4 /* 43-film-roll.png */,
 				A78CE6561754A28900DBDEC4 /* 43-film-roll@2x.png */,
 				A78CE6571754A28900DBDEC4 /* Icon.png */,
@@ -221,8 +247,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78CE66D1754A28900DBDEC4 /* 43-film-roll.png in Resources */,
+				A7359870180410CA004C7930 /* DTLoupe.bundle in Resources */,
 				A78CE66E1754A28900DBDEC4 /* 43-film-roll@2x.png in Resources */,
 				A78CE66F1754A28900DBDEC4 /* Icon.png in Resources */,
+				A7359872180419AE004C7930 /* icon_smile.gif in Resources */,
 				A78CE6701754A28900DBDEC4 /* Icon@2x.png in Resources */,
 				A78CE6711754A28900DBDEC4 /* test.html in Resources */,
 			);
@@ -316,7 +344,8 @@
 				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
+					"\\\"$(SRCROOT)/DTRichTextEditor.embeddedframework\\\"",
+					/Users/oliver/Documents/Projects/DTRichTextEditorDemo/DTRichTextEditor.embeddedframework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
@@ -327,6 +356,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DTRichTextEditor.embeddedframework/Headers\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -339,7 +369,8 @@
 				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/DTRichTextEditor.embeddedframework\"",
+					"\\\"$(SRCROOT)/DTRichTextEditor.embeddedframework\\\"",
+					/Users/oliver/Documents/Projects/DTRichTextEditorDemo/DTRichTextEditor.embeddedframework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/DTRichTextEditor-Prefix.pch";
@@ -350,6 +381,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DTRichTextEditor.embeddedframework/Headers\"/**";
 				WRAPPER_EXTENSION = app;
 			};

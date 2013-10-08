@@ -76,12 +76,11 @@ NSString *DTTestStateDataKey = @"DTTestStateDataKey";
 	richEditor.baseURL = [NSURL URLWithString:@"http://www.drobnik.com"];
     richEditor.textDelegate = self;
 	richEditor.defaultFontFamily = @"Helvetica";
-	richEditor.textSizeMultiplier = 1.0;
+	richEditor.textSizeMultiplier = 2.0;
 	richEditor.maxImageDisplaySize = CGSizeMake(300, 300);
     richEditor.autocorrectionType = UITextAutocorrectionTypeYes;
     richEditor.editable = self.testState.editable;
     richEditor.editorViewDelegate = self;
-    richEditor.defaultFontSize = 30;
 	
 	NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
 	[defaults setObject:[NSNumber numberWithBool:YES] forKey:DTDefaultLinkDecoration];
